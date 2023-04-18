@@ -1,0 +1,30 @@
+{
+  "name": "create-tokyo-project",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "bin": {
+    "create-tokyo-project": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "commander": "^10.0.1",
+    "download-git-repo": "^3.0.2",
+    "enquirer": "^2.3.6",
+    "figures": "^5.0.0",
+    "inquirer": "^9.1.5",
+    "log-symbols": "^5.1.0",
+    "ora": "^6.3.0"
+  }
+}
