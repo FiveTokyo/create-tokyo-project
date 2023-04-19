@@ -4,12 +4,12 @@ import logSymbols from 'log-symbols'
 import download from 'download-git-repo'
 import chalk from 'chalk'
 import { Command } from 'commander';
-import enquirer from 'inquirer';
+import inquirer from 'inquirer';
 import fs from 'fs';
 import ora from 'ora';
 import path from 'path';
 // const { Command } = require('commander');
-const prompt = enquirer.prompt
+const prompt = inquirer.prompt
 // const path = require('path');
 const program = new Command();
 const spinner = ora()
@@ -104,13 +104,13 @@ const args = program.version('0.0.1', '-v', '--version')
                 console.log(chalk.red('已存在该目录文件！请删除该文件或者换个文件名'))
                 return
             }
-            spinner.start(`正在拉去 ${targetTemplate.github} 模板中...😎`)
+            spinner.start(`正在拉取 ${targetTemplate.github} 模板中...😎`)
             downloadTemplate({ repository: targetTemplate.github, projectName: projectName.name })
             // download(targetTemplate.github, dir, err => {
             //     if (err) {
             //         spinner.fail(logSymbols.error, chalk.red(err.message));
             //     } else {
-            //         spinner.succeed(logSymbols.success, chalk.green('拉去github模板成功!😎'));
+            //         spinner.succeed(logSymbols.success, chalk.green('拉取github模板成功!😎'));
             //         console.log(chalk.gray('\n 请开始你的项目吧'))
             //         console.log(chalk.gray(`\n cd ${projectName.name} `))
             //         console.log(chalk.gray(`\n pnpm i \n `))
